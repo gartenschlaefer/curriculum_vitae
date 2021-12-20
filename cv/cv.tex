@@ -1,0 +1,43 @@
+% --
+% my cv
+
+\documentclass[11pt, a4paper]{article}
+
+% add packages and macros
+\input{../lib/packages.tex}
+\input{../lib/macros.tex}
+
+% set paper geometry: A4 210 x 297
+\geometry{a4paper, total={160mm, 257mm}, left=25mm, top=20mm}
+
+% empty page style
+\pagestyle{empty}
+
+
+% --
+% document
+
+\begin{document}
+
+% header
+\input{./header.tex}
+
+\begin{multicols}{2}
+
+  % personal
+  \input{./personal.tex}
+
+  \columnbreak
+
+  % education
+  \input{./education.tex}
+
+  % working experience
+  \input{./working.tex}
+
+  % game dev (optional)
+  %\input{./game_dev.tex}
+
+\end{multicols}
+
+\end{document}
