@@ -1,6 +1,29 @@
 % --
 % header
 
+\IfLanguageName{ngerman}
+{
+\begin{multicols}{2}
+
+  % my image
+  \begingroup \centering \includegraphics[width=0.4\textwidth]{./figs/chris.jpg} \endgroup\\
+
+  \vspace{0.5cm}
+
+  % fancy name
+  \fancyName{Christian Walter}\\
+
+  \headParam{Kontakt}\\\\
+  % contact
+  \begin{tabular} { l l }
+    \textbf{E-Mail:} & \href{mailto:christian.walter@mailfence.com}{christian.walter@mailfence.com}\\
+    \textbf{Telefon:} & +43 680 210 423 1\\
+    \textbf{Adresse:} & Neuhof 13, 3631 Ottenschlag\\
+  \end{tabular}
+
+\end{multicols}
+}
+{
 \begin{multicols}{2}
 
   % my image
@@ -20,3 +43,4 @@
   \end{tabular}
 
 \end{multicols}
+}
