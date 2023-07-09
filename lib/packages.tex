@@ -17,7 +17,7 @@
 \usepackage[dvipsnames]{xcolor}
 
 % hyperreferences
-\usepackage[hidelinks]{hyperref}
+\usepackage[colorlinks=true, urlcolor=viola]{hyperref}
 
 % skip intend
 \usepackage{parskip}
@@ -46,3 +46,7 @@
 
 % language if package
 \usepackage{iflang}
+
+% enumeration stuff
+\usepackage{enumitem}
+\setlist[enumerate]{label=(\roman*), topsep=0pt, itemsep=0pt, parsep=0pt, nosep}
