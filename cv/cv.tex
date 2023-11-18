@@ -13,6 +13,9 @@
 % empty page style
 \pagestyle{empty}
 
+% complex image tool
+\usepackage{tikz}
+
 
 % --
 % document
@@ -20,7 +23,32 @@
 \begin{document}
 %\selectlanguage{german}
 \selectlanguage{english}
-\input{./header.tex}
+% --
+% overlay image
+\begin{tikzpicture}[remember picture, overlay, opacity=1.0]
+  \node at (current page.north) [yshift=-13mm] {\includegraphics[width=1.4\textwidth]{./figs/green.jpg}};
+\end{tikzpicture}
+% --
+% header
+\vspace{-0.5cm}
+\begin{multicols}{2}
+
+  % my image
+  \begingroup \centering \includegraphics[width=0.4\textwidth]{./figs/chris_transparent.png} \endgroup\\
+
+  \vspace{0.9cm}
+  % fancy name
+  \fancyName{Christian Walter}\\\\
+  \headParam{\IfLanguageName{german}{Kontakt}{Contact}}\\\\
+  % contact
+  \begin{tabular} { l l }
+    \textbf{E-Mail:} & \href{mailto:christian.walter@mailfence.com}{christian.walter@mailfence.com}\\
+    \textbf{\IfLanguageName{german}{Telefon:}{Phone:}} & +43 680 210 423 1\\
+    \textbf{\IfLanguageName{german}{Adresse:}{Address:}} & Neuhof 13, 3631 Ottenschlag\\
+  \end{tabular}
+\end{multicols}
+% --
+% content
 \begin{multicols}{2}
   % inputs
   \input{./personal.tex}
